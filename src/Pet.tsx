@@ -1,7 +1,24 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
+import { Photo } from "@frontendmasters/pet";
 import { Link } from "@reach/router";
 
-const Pet = ({ name, animal, breed, media, location, id }) => {
+interface IProps {
+    name: string;
+    animal: string;
+    breed: string;
+    media: Photo[];
+    location: string;
+    id: number;
+}
+
+const Pet: FunctionComponent<IProps> = ({
+    name,
+    animal,
+    breed,
+    media,
+    location,
+    id
+}) => {
     // return React.createElement("div", {}, [
     //     React.createElement("h1", {}, name),
     //     React.createElement("h2", {}, animal),
